@@ -35,8 +35,13 @@ app.get("/", function (req, res) {
                 console.log(results.statusCode);
 
 
-                results.on("data", async function (data5) {
-                    const weather5 =await JSON.parse(data5);
+               let data5="";
+                results.on("data", function (datas) {
+                 
+                data5+=datas;
+                });
+                    results.on("end", function() {
+                    const weather5 =JSON.parse(data5);
 
                     
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <header>
+        <h1>Weather Forecast</h1>
+
+        <form action="/" method="post">
+
+            
+            <input id="cityinput" type="text" name="cityname" placeholder="Enter City">
+            <button type="submit" class="check">Check</button>
+    
+        </form>
+    </header>
+    <section class="weather-container">
+        <div class="location">
+            <h2>Current City: <%= City%></h2>
+        </div>
+        <div class="weather-info">
+            <div class="temperature">
+                <h3>Temperature</h3>
+                <p><%=temp%>°F</p>
+            </div>
+            <div class="conditions">
+                <h3>Conditions</h3>
+                <p><%=des%></p>
+            </div>
+            <div class="view">
+            <img src="<%=imgsrc%>"/>
+            
+            </div>
+        </div>
+    </section>
+    <section class="forecast">
+        <h2>5-Day Forecast</h2>
+
+        <div class="forecast-heading">
+
+            <p><b>Day</b></p>
+            <p><b>Min Temp</b></p>
+            <p><b>Max Temp</b></p>
+            <p><b>Conditions</b></p>
+        </div>
+        <br>
+        <hr class="style13">
+        <br>
+       <% for(var i=0;i<days5.length; i++)
+       { %>
+
+        <div class="forecast-day">
+
+
+
+            <p><%=days5[i].dt_txt%></p>
+            <p><%=days5[i].min_temp %></p>
+            <p><%=days5[i].max_temp %></p>
+           
+            <img src="<%= days5[i].icon %>" />
+            <p><%=days5[i].descrip %></p>
+         
+        </div>
+        
+      <% } %> 
+    
+        
+       
+    </section>
+    <footer>
+        <p>&copy; 2023 Weather Forecast</p>
+    </footer>
+</body>
+</html>

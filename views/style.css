@@ -1,0 +1,143 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #0078d4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.weather-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+input {
+    border: none; /* Remove the default border */
+    border-bottom: 2px solid white; /* Add a white bottom border */
+    background-color: transparent; /* Make the background transparent */
+    color: white; /* Set text color */
+    padding: 5px; /* Add some padding for spacing */
+    outline: none; /* Remove the default input focus outline */
+    width: 50%;
+}
+input::placeholder {
+    color: white; /* Change the color of the placeholder text */
+}
+
+.check
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white; /* Button background color */
+    color: #0078d4; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.check:hover {
+    background-color: white; /* Change background color on hover */
+    transform: scale(1.05); /* Add a slight scaling effect on hover */
+    
+}
+
+.location h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.temperature, .conditions, .view{
+    flex: 1;
+    text-align: center;
+}
+
+.view img{
+ max-width: 100px;
+ max-height: 100px;
+}
+
+.temperature h3, .conditions h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.temperature p, .conditions p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.forecast {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.forecast h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.forecast-day, .forecast-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.forecast-heading p 
+{
+    flex: 1;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.forecast-day p {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+}
+.forecast-day img{
+    max-height: 50px;
+    max-width: 50px;
+}
+.style13 {
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+
+footer {
+    background-color: #0078d4;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

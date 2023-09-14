@@ -195,7 +195,7 @@ app.post("/", function (req, res) {
     //5 days forecast
     //https://api.openweathermap.org/data/2.5/forecast?lat=51.5085&lon=-0.1257&appid=55d22cd648f90ad80af932acbd0f2e7b&units=metric#
 });
-
+const port = process.env.PORT || 3000;
 app.listen(port, "0.0.0.0", function () {
     console.log('server at 5000');
 });
